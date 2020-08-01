@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { TestComponent } from "./components/TestComponent";
+import MetaAndImports from "./components/MetaAndImports";
+
+//my components
 
 ReactDOM.render(
     <React.StrictMode>
+        <MetaAndImports />
         <App/>
-        <TestComponent/>
 
     </React.StrictMode>,
     document.getElementById('root')
