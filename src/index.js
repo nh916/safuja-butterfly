@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import NavigationBar from "./components/NavigationBar";
 import App from "./App";
+import BasicExample from "./components/BasicExample";
+
 
 ReactDOM.render(
     <React.StrictMode>
