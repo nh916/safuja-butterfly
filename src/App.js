@@ -10,7 +10,7 @@ function App() {
     return (
         <BrowserRouter>
 
-            <FullPageIntroWithNonFixedTransparentNavbar/>
+            <NavigationBar />
 
             <switch>
                 <Route path="/" exact component={Home}/>
