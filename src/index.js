@@ -1,17 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
-import MetaAndImports from "./components/MetaAndImports";
-
-//my components
+import NavigationBar from "./components/NavigationBar";
+import App from "./App";
 
 ReactDOM.render(
     <React.StrictMode>
-        <MetaAndImports />
-        <App/>
-
+        <App />
     </React.StrictMode>,
     document.getElementById('root')
 );
