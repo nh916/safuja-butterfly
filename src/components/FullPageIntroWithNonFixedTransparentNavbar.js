@@ -13,11 +13,12 @@ import {
 } from 'mdbreact';
 import {BrowserRouter as Router} from 'react-router-dom';
 
-class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
+class FullPageIntroWithFixedTransparentNavbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             collapse: false,
+            isWideEnough: false,
         };
         this.onClick = this.onClick.bind(this);
     }
@@ -32,34 +33,34 @@ class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
         return (
             <div>
                 <header>
-                    <MDBView src="https://mdbootstrap.com/img/Photos/Others/img%20(42).jpg">
-                        <Router>
-                            <MDBNavbar dark expand="md">
-                                <MDBContainer>
-                                    <MDBNavbarBrand href="/">
-                                        <strong>Navbar</strong>
-                                    </MDBNavbarBrand>
-                                    <MDBNavbarToggler onClick={this.onClick}/>
-                                    <MDBCollapse isOpen={this.state.collapse} navbar>
-                                        <MDBNavbarNav left>
-                                            <MDBNavItem active>
-                                                <MDBNavLink to="#">Home</MDBNavLink>
-                                            </MDBNavItem>
-                                            <MDBNavItem>
-                                                <MDBNavLink to="#">Link</MDBNavLink>
-                                            </MDBNavItem>
-                                            <MDBNavItem>
-                                                <MDBNavLink to="#">Profile</MDBNavLink>
-                                            </MDBNavItem>
-                                        </MDBNavbarNav>
-                                    </MDBCollapse>
-                                </MDBContainer>
-                            </MDBNavbar>
-                        </Router>
+                    <Router>
+                        <MDBNavbar color="bg-primary" fixed="top" dark expand="md" scrolling transparent>
+                            <MDBNavbarBrand href="/">
+                                <strong>Navbar</strong>
+                            </MDBNavbarBrand>
+                            {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick}/>}
+                            <MDBCollapse isOpen={this.state.collapse} navbar>
+                                <MDBNavbarNav left>
+                                    <MDBNavItem active>
+                                        <MDBNavLink to="#">Home</MDBNavLink>
+                                    </MDBNavItem>
+                                    <MDBNavItem>
+                                        <MDBNavLink to="#">Link</MDBNavLink>
+                                    </MDBNavItem>
+                                    <MDBNavItem>
+                                        <MDBNavLink to="#">Profile</MDBNavLink>
+                                    </MDBNavItem>
+                                </MDBNavbarNav>
+                            </MDBCollapse>
+                        </MDBNavbar>
+                    </Router>
 
-                        <MDBMask overlay="indigo-slight" className="flex-center flex-column text-white text-center">
-                            <h2>This Navbar isn't fixed</h2>
-                            <h5>When you scroll down it will disappear</h5><br/>
+                    <MDBView src="https://mdbootstrap.com/img/Photos/Others/img%20(40).jpg">
+                        <MDBMask overlay="purple-light" className="flex-center flex-column text-white text-center">
+                            <h2>This Navbar is fixed</h2>
+                            <h5>It will always stay visible on the top, even when you scroll down</h5>
+                            <p>Navbar's background will switch from transparent to solid color while scrolling down</p>
+                            <br/>
                             <p>Full page intro with background image will be always displayed in full screen mode,
                                 regardless of device </p>
                         </MDBMask>
@@ -73,6 +74,11 @@ class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
                             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
                             in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
                             sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                            laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
                             laborum.</p>
                     </MDBContainer>
                 </main>
@@ -81,4 +87,4 @@ class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
     }
 }
 
-export default FullPageIntroWithNonFixedTransparentNavbar;
+export default FullPageIntroWithFixedTransparentNavbar;
