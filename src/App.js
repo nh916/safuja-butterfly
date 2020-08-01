@@ -1,11 +1,12 @@
 import React from 'react';
-import {Route, BrowserRouter, Redirect} from "react-router-dom";
-import Home from "./components/Home";
+import {BrowserRouter, Route, withRouter, Redirect} from "react-router-dom";
+import Home from "./pages/Home";
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import NotFound from "./components/NotFound";
+import About from "./pages/About";
+import { Link } from 'react-router-dom';
 
 
 function App() {
@@ -15,8 +16,8 @@ function App() {
 
             <switch>
 
-                <Route path="/" exact component={Home}/>
-                {/*<Route path="/about" exact component={}/>*/}
+                <Link path="/" exact component={Home}/>
+                <Link path="/about" exact component={About}/>
                 {/*<Route path="/samples" exact component={Home}/>*/}
                 {/*<Route path="/contact" exact component={Home}/>*/}
 
