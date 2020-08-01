@@ -42,20 +42,23 @@ class FullPageIntroWithFixedTransparentNavbar extends React.Component {
                             <MDBCollapse isOpen={this.state.collapse} navbar>
                                 <MDBNavbarNav left>
                                     <MDBNavItem active>
-                                        <MDBNavLink to="#">Home</MDBNavLink>
+                                        <MDBNavLink to="/">Home</MDBNavLink>
                                     </MDBNavItem>
                                     <MDBNavItem>
-                                        <MDBNavLink to="#">Link</MDBNavLink>
+                                        <MDBNavLink to="/samples">Samples</MDBNavLink>
                                     </MDBNavItem>
                                     <MDBNavItem>
-                                        <MDBNavLink to="#">Profile</MDBNavLink>
+                                        <MDBNavLink to="/about">About Us</MDBNavLink>
+                                    </MDBNavItem>
+                                    <MDBNavItem>
+                                        <MDBNavLink to="/contact">Contact Us</MDBNavLink>
                                     </MDBNavItem>
                                 </MDBNavbarNav>
                             </MDBCollapse>
                         </MDBNavbar>
                     </Router>
 
-                    <MDBView src="https://mdbootstrap.com/img/Photos/Others/img%20(40).jpg">
+                    <MDBView src="https://images.unsplash.com/photo-1513897962041-55f6de928dad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
                         <MDBMask overlay="purple-light" className="flex-center flex-column text-white text-center">
                             <h2>This Navbar is fixed</h2>
                             <h5>It will always stay visible on the top, even when you scroll down</h5>

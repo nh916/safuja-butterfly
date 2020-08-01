@@ -1,9 +1,13 @@
 import React from "react";
+import FullPageIntroWithFixedTransparentNavbar from "./FullPageIntroWithNonFixedTransparentNavbar";
+import Footer from "./Footer";
 
 export default function Home() {
     return (
-        <div>
-            <h1>home page</h1>
-        </div>
+        <>
+        <FullPageIntroWithFixedTransparentNavbar />
+
+        <Footer />
+        </>
     );
 }
