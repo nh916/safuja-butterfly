@@ -2,8 +2,9 @@ import React from "react";
 
 export default function About() {
     return (
-        <>
-            <h1>hello world</h1>
-        </>
+        <div>
+            <h1>this is about</h1>
+        </div>
+
     );
 }

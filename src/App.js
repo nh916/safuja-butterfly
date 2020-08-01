@@ -8,17 +8,19 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 
 
+import Button from 'react-bootstrap/Button';
+import HomeScreen from "./components/HomeScreen";
+
+
+
 function App() {
     return (
         <BrowserRouter>
+            <Switch>
+                <Route path="/about" exact component={About}/>
+                <Route path="/" exact component={Home}/>
 
-            <div>
-                <Switch>
-                    <Route path="/about" exact component={About}> </Route>
-                    <Route path="/" exact component={Home}/>
-
-                </Switch>
-            </div>
+            </Switch>
         </BrowserRouter>
 
     );
