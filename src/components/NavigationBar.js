@@ -1,3 +1,4 @@
+//mdBootstrap component not using yet
 import React from 'react';
 import {
     MDBCollapse,
@@ -41,10 +42,10 @@ class NonFixedNavbarExample extends React.Component {
                             <MDBCollapse isOpen={this.state.collapse} navbar>
                                 <MDBNavbarNav left>
                                     <MDBNavItem active>
-                                        <MDBNavLink to="#">Home</MDBNavLink>
+                                        <MDBNavLink to="/">Home</MDBNavLink>
                                     </MDBNavItem>
                                     <MDBNavItem>
-                                        <MDBNavLink to="#">Features</MDBNavLink>
+                                        <MDBNavLink to="/about">about</MDBNavLink>
                                     </MDBNavItem>
                                     <MDBNavItem>
                                         <MDBNavLink to="#">Pricing</MDBNavLink>

@@ -1,3 +1,5 @@
+//mdBootstrap landing page that navigation links are not working for.
+// the url changes when clicking on the navigation links but the view does not load and the page does not change
 import React from 'react';
 import {
     MDBCollapse,

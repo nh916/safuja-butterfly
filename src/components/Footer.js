@@ -1,3 +1,4 @@
+// react mdBootstrap footer but not using yet
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 

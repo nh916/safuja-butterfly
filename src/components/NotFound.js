@@ -1,3 +1,4 @@
+//generic not found page but not using yet
 import React from "react";
 
 export default function NotFound() {
